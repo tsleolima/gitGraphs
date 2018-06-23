@@ -48,9 +48,8 @@ function Matrix(options) {
 		.rangeBands([20, height - 60]);
 
 	var colorMap = d3.scale.linear()
-		.domain([1, 100])
-		.interpolate(d3.interpolateHcl)
-		.range([d3.rgb("#ebe	df0"), d3.rgb('196127')]);
+		.domain([0, 1])
+		.range([startColor, endColor]);
 
 	var row = svg.selectAll(".row")
 		.data(data)
@@ -70,6 +69,7 @@ function Matrix(options) {
 		.style("stroke-width", 2)
 		.style('stroke', '#ebedf0')
 		.style('stroke', 'white');
+
 	row.selectAll(".cell")
 		.data(function (d, i) { return data[i]; })
 		.style("fill", colorMap);
@@ -104,5 +104,33 @@ function Matrix(options) {
 		.attr("dy", ".32em")
 		.attr("text-anchor", "end")
 		.text(function (d, i) { return d; });
+
+	pesoCommit = [0.25, 0.5, 0.75, 1];
+
+	var legend = svg.append('g')
+		.attr('class', 'row-legend')
+		.attr('transform', 'translate(650,175) rotate(0)');
+
+	var rowLegend = legend.selectAll('.row-legend')
+		.data(pesoCommit)
+		.enter().append('g')
+		.attr('class', 'row-legend')
+
+	rowLegend.append('rect')
+		.attr('width', '10')
+		.attr('height', '10')
+		.attr('x', (d, i) => x(i))
+		.attr('y', (d, i) => y(100))
+		.style("fill", colorMap)
+
+	rowLegend.append('text')
+		.attr('x', -15)
+		.attr('y', 8)
+		.text('Menos')
+
+	rowLegend.append('text')
+		.attr('x', 100)
+		.attr('y', 8)
+		.text('Mais')
 
 }
