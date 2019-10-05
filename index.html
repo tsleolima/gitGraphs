@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gráfico GitHub-D3</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-</head>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div style="display:inline-block;" id="legend"></div>
     <div style="display:inline-block; float:left" id="container"></div>
 
     <script src="js/main.js"></script>
-    <script>
-
-        var correlationMatrix = [
-            [0.2, 0.4, 0.6, 0.8, 1, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [0.5, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [0.7, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [0.2, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5],
-            [0.4, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5, 0, 0.75, 1, 0.3, 0, 0.8, 0, 0.2, 1, 0.5]
-        ];
-
-        var labelsMeses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-        var labelsDias = ['Seg', 'Qua', 'Sex']
-        Matrix({
-            container: '#container',
-            data: correlationMatrix,
-            labelsMeses: labelsMeses,
-            labelsDias: labelsDias,
-            start_color: '#ebedf0',
-            end_color: '#0f77c1'
-        });
-    </script>
-</body>
-
+  </body>
 </html>
